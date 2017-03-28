@@ -1,0 +1,25 @@
+<table class="table chitTable">
+  <tr>
+    <td><h3>Details for Chit {{chit.chitName}}</h3></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Agent Name</td>
+    <td>{{chit.agentName}}</td>
+  </tr>
+  <tr>
+    <td>Start Date</td>
+    <td>{{chit.startDate| date:'medium'}}</td>
+  </tr>
+  <tr>
+    <td>End Date</td>
+    <td>{{chit.endDate| date:'medium'}}</td>
+  </tr>
+  <tr>
+    <td>Amount</td>
+    <td>{{chit.totalValue}}</td>
+  </tr>
+</table>
+<div>
+  <a class="btn btn-primary" ui-sref="editChit({id:chit.id})">Edit</a>
+</div>

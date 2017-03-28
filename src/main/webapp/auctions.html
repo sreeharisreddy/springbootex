@@ -1,0 +1,26 @@
+		<div>
+		<table st-table="displayed" class="table table-striped">
+			<thead>
+				<th>Id</th>
+				<th>Auction Date</th>
+				<th>Total Auction Amount</th>
+				<th>IndividualAmount</th>
+				<th>Paid Date</th>
+				<th>Comments</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="auction in auctionss">
+					<td>{{auction.id}}</td>
+					<td>{{auction.agentName}}</td>
+					<td>{{auction.startDate| date:'medium'}}</td>
+					<td>{{auction.endDate| date:'medium'}}</td>
+					<td>
+     				 <a class="btn btn-primary" ui-sref="viewAuction({id:auction.id})">View</a>
+     				 <a class="btn btn-danger"  ng-click="deleteAuction(auction)">Delete</a>
+   					 </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

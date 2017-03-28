@@ -1,0 +1,26 @@
+		<a ui-sref="newChit" class="btn-primary btn-lg nodecoration">Add New Chit</a>
+		<div>
+		<table st-table="displayed" class="table table-striped">
+			<thead>
+				<th>Id</th>
+				<th>Agent Name</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="chit in chits">
+					<td>{{chit.id}}</td>
+					<td>{{chit.agentName}}</td>
+					<td>{{chit.startDate| date:'medium'}}</td>
+					<td>{{chit.endDate| date:'medium'}}</td>
+					<td>
+     				 <a class="btn btn-primary" ui-sref="viewChit({id:chit.id})">View</a>
+     				 <a class="btn btn-danger"  ng-click="deleteChit(chit)">Delete</a>
+     				 <a ui-sref="newAuction" class="btn-primary btn-lg nodecoration">Add Auction</a>
+   					 </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

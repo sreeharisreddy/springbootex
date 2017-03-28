@@ -1,0 +1,21 @@
+		
+		
+		<table st-table="displayed" class="table table-striped">
+			<thead>
+				<th>Id</th>
+				<th>Share Name</th>
+				<th>Text</th>
+			</thead>
+			<tbody>
+			<tr>Price <input type="text" ng-model="sprice"> Name <input type="text" ng-model="ssearch">Raise <input type="text" ng-model="sraise"><input type="button" ng-click="addSelected()" value="selected"></tr>
+				<tr ng-repeat="share in shares | pricefilter:price|namefilter:search| raisingfilter:raise">
+					<td><input type="checkbox" checklist-model="sselected" checklist-value="share" ></td>
+					<td>{{share.id}}</td>
+					<td>{{share.name}}</td>
+					<td width="70px" ng-repeat="p in share.prices" bgcolor="{{ p.price > p.prevPrice ? 'green':'red'}}" >{{p.date}}-{{p.price}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

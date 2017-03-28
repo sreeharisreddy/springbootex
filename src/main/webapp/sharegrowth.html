@@ -1,0 +1,20 @@
+		
+		
+		<table st-table="displayed" class="table table-striped">
+			<thead>
+				<th>Id</th>
+				<th>Share Name</th>
+				<th>Percent</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="share in shares">
+					<td>{{share.shareId}}</td>
+					<td>{{share.sname}}</td>
+					<td>{{share.change_percent}}</td>
+					<td><a href="{{share.url}}">Rediff</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

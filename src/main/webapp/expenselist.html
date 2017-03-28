@@ -1,0 +1,8 @@
+    <table st-table="displayed" class="table table-striped">
+    <caption>Expenses </caption>
+    	<tr><th>Expense Type</th><th>Expense Date</th><th>Amount</th><th>Currency</th><th>Reason</th></tr>
+      <tr ng-repeat="expense in expenses | orderBy: 'EXP_DATE' ">
+        <td>{{expense.TYPE}}</td><td>{{expense.EXP_DATE | date :  "dd.MM.y" }}</td><td>{{expense.AMOUNT}}</td><td>{{expense.CURRENCY}}</td><td>{{expense.REASON}}</td>
+      </tr>
+     
+    </table>

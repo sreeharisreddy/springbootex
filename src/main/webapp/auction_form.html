@@ -1,0 +1,44 @@
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Auction Date</label>
+			<div class="col-sm-10">
+				<input type="date" ng-model="auction.auctionDate" class="form-control"
+					id="name" placeholder="Auction Date" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="contact" class="col-sm-2 control-label">Total Auction Amount</label>
+			<div class="col-sm-10">
+				<input type="number" ng-model="auction.totalAuctionAmount" class="form-control"
+					id="totalAuctionAmount" placeholder="TotalAuctionAmount" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Auction Interest</label>
+			<div class="col-sm-10">
+				<input type="number" ng-model="auction.interest" class="form-control"
+					id="interest" placeholder="Start Date" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="contact" class="col-sm-2 control-label">Individual Auction Amount</label>
+			<div class="col-sm-10">
+				<input type="number" ng-model="auction.individualAmount" class="form-control"
+					id="totalAuctionAmount" placeholder="TotalAuctionAmount" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Paid Date</label>
+			<div class="col-sm-10">
+				<input type="datetime" ng-model="auction.paidDate| date:'medium'" class="form-control"
+					id="endDate" placeholder="End Date" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Comments</label>
+			<div class="col-sm-10">
+				<textarea rows="5" cols="25" ng-model="auction.comments"
+					class="form-control" id="comments" placeholder="Comments"></textarea>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="chitApp">
+<head>
+<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+	 <title>My Business</title>
+	 <link rel='stylesheet' type='text/css' href='estilos.css' />
+	 <link rel='stylesheet' type='text/css' href='fonts.css' />
+	 <script src="http://code.jquery.com/jquery-latest.js"></script>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script type="text/javascript" 	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="js/app.js"/></script>
+	<script type="text/javascript" src="js/auction.js"/></script>
+	<script type="text/javascript" src="js/expenses.js"/></script>
+	 <script type="text/javascript">
+	 	var cnt = 1;
+	 	$(document).ready(function(){
+	 		//alert(cnt);
+	 		$('.menu_bar').click(function(){
+
+
+	 		if (cnt == 1) {
+	 			//alert(cnt);
+	 			$('nav').animate({left:'0'});
+	 			cnt = 0;
+	 		} else{
+	 			cnt = 1;
+	 			$('nav').animate({left:'-100%'});
+	 		}
+		  });
+
+	 		$('.submenu').click(function(){
+				$(this).children('.children').slideToggle('slow', function() {
+    				
+ 				 });
+
+			});
+	 	});
+	 </script>
+</head>
+<body>
+<header>
+<div class="menu_bar"><a href="#" class="bt-menu">Menu<span class="icon-list2"></span> </a></div>
+<nav>
+	
+
+	<ul>
+			<li><a href='listsgloans.php' target="content">Loans<span class="icon-credit-card"></span></a></li>
+			<li class="submenu">
+				<a href='#'><span class="icon-rocket"></span>Interest<span class="caret"></span></a>
+				<ul class="children">
+					<li><a href="CustomerPrincipleList.php" target="content">Given<span class="icon-home"></span> </a></li>
+					<li><a href="CustomerPrincipleListDebit.php" target="content">Taken <span class="icon-bubble"></span></a></li>
+					<li><a href="CustomerCreate.php" target="content">Create Customer <span class="icon-price-tag"></span></a></li>
+					<li><a href="CustomerList.php" target="content">Customers List <span class="icon-bubble"></span></a></li>
+			        <li><a href="myddl.php" target="content">Select Qry <span class="icon-bubble"></span></a></li>
+			        <li><a href="createddl.php" target="content">DDL <span class="icon-bubble"></span></a></li>
+	        	</ul>
+	        </li>
+
+	        <li class="submenu">
+				<a href='#'><span class="icon-rocket"></span>Chits<span class="caret"></span></a>
+				<ul class="children">
+					<li><a ui-sref="chits" href="chits">Chits</a></li>
+				</ul>
+			</li>
+			<li class="submenu">
+				<a href='#'><span class="icon-rocket"></span>Expenses<span class="caret"></span></a>
+				<ul class="children">
+					<li><a  ui-sref="newExpense" href="newExpense" >Create Expense</a></li>
+					<li><a ui-sref="expenses" href="expenses">Show Expenses</a></li>
+				</ul>
+			</li>
+	</ul>
+</nav>
+</header>
+ <div class="container">
+      <div class="row top-buffer">
+        <div class="col-xs-8 col-xs-offset-2">
+          <div ui-view></div> 
+        </div>
+      </div>
+ </div>
+
+</body>
+</html>

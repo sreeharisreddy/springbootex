@@ -1,0 +1,61 @@
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Broker Name</label>
+			<div class="col-sm-10">
+				<input type="text" ng-model="chit.agentName" class="form-control"
+					id="name" placeholder="Agent Name" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="contact" class="col-sm-2 control-label">Contact No</label>
+			<div class="col-sm-10">
+				<input type="text" ng-model="chit.contactNo" class="form-control"
+					id="contactNo" placeholder="Contact No" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Start Date</label>
+			<div class="col-sm-10">
+				<input type="datetime" ng-model="chit.startDate| date:'medium'" class="form-control"
+					id="startDate" placeholder="Start Date" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">End Date</label>
+			<div class="col-sm-10">
+				<input type="datetime" ng-model="chit.endDate| date:'medium'" class="form-control"
+					id="endDate" placeholder="End Date" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Chit Value</label>
+			<div class="col-sm-10">
+				<input type="text" ng-model="chit.totalValue" class="form-control"
+					id="totalValue" placeholder="Chit Value" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Received
+				Amount</label>
+			<div class="col-sm-10">
+				<input type="text" ng-model="chit.receivedAmount"
+					class="form-control" id="receivedAmount"
+					placeholder="Received Amount" />
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Status</label>
+			<div class="col-sm-10">
+				<input type="text" ng-model="chit.status" class="form-control"
+					id="status" placeholder="Status" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="title" class="col-sm-2 control-label">Comments</label>
+			<div class="col-sm-10">
+				<textarea rows="5" cols="25" ng-model="chit.comments"
+					class="form-control" id="comments" placeholder="Comments"></textarea>
+			</div>
+		</div>
+	</body>
+</html>
